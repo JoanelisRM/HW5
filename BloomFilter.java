@@ -1,6 +1,6 @@
 /******************************************************************
  *
- *   YOUR NAME / SECTION NUMBER
+ *   Joanelis Rivera Matos / 002
  *
  *   Note, additional comments provided throughout source code is
  *   for educational purposes.
@@ -222,9 +222,12 @@ class BloomFilter {
         // HINT: the bitmap is the private class variable 'data', and it is
         // of type BitSet (Java class BitSet). See Oracle documentation for
         // this class on available methods. You can also see how method 'add'
-        // in this class uses the object.
+        // in this class uses the object. 
+        //
+        long hc = hashCode(s, 0);
+        int bitNo = (int) (hc) & this.hashMask;
 
-        return false;
+        return data.get(bitNo);
     }
 
 
